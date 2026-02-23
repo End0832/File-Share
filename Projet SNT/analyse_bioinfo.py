@@ -11,16 +11,8 @@ print("L'age moyen par sexe est: \n", df.groupby("sexe")["age"].mean())
 patients_ameliores = df[df['résultat'] == 'amélioration']
 print("Patients ameliores :\n", patients_ameliores)
 
-### Les lignes suivantes sont commentées pour le bon fonctionnement du code.
-
-#gene = df[df['sequence_adn'] == "sequence_ADN"] 
-#print("genes present :\n", gene) 
-
-### "sequence_ADN" est non fourni. 
-### De plus sous cette syntaxe, sequence_ADN doit être EGALE et non pas contenue.
-### Cette syntaxe correspond mieux :
-
-#gene = df[df['sequence_adn'].str.contains("sequence_ADN")]
+gene = df[df['sequence_adn'] == "ACTCTCTCTATATTTATATATCGTCAGTGCTGGACTTGCATCGAGTTGC"] 
+print("genes present :\n", gene) 
 
 print("Moyenne d'age des patients améliorés :", patients_ameliores['age'].mean())
 
